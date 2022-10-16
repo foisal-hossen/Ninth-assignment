@@ -22,7 +22,7 @@ const Statistics = () => {
       <div className="mt-8 ">
         <ResponsiveContainer width="80%" height={200}>
           <BarChart width={150} height={40} data={loadedData}>
-            <XAxis dataKey= {name} />
+          <XAxis dataKey = {name} />
             <YAxis />
             <Tooltip />
             <Bar dataKey= {total} fill="#8884d8" />

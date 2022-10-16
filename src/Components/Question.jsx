@@ -18,7 +18,7 @@ const Question = ({ quiz }) => {
   };
   return (
    
-    <div className="bg-rose-700 text-white font-semibold p-8 rounded-lg">
+    <div className="bg-slate-600 text-white font-semibold p-8 rounded-lg">
       <div>
         <div className="flex justify-between">
           <p className="text-lg font-semibold">
@@ -34,13 +34,12 @@ const Question = ({ quiz }) => {
               <input
                 value={option}
                 checked={option === selected ? true : false}
-                type="checkbox"
+                type="radio"
                 key={idx}
                 onClick={(e) => {
                   handleAnswer(e);
                 }}
-              />
-              {option}
+              />  {option}
             </label>
           ))}
 
