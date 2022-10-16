@@ -1,9 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../images/website-icon.png";
-import "./Header.css";
+import logo from "../Image/heading.png";
+import './Header.css'
+
+
 const Header = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-violet-900">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -28,18 +30,15 @@ const Header = () => {
           >
             <li>
               <NavLink
-                className={`mr-3 text-lg font-semibold text-slate-900 ${({
-                  isActive,
-                }) => (isActive ? "active" : undefined)}`}
-                to="/home"
-              >
-                Home
+                className={`mr-3 text-lg font-semibold text-violet-900 
+                ${({ isActive, }) => (isActive ? "active" : undefined)}`}
+                to="/home"> Home
               </NavLink>
             </li>
 
             <li>
               <NavLink
-                className={`mr-3 text-lg font-semibold text-slate-900 ${({
+                className={`mr-3 text-lg font-semibold text-violet-900 ${({
                   isActive,
                 }) => (isActive ? "active" : undefined)}`}
                 to="/topics"
@@ -49,7 +48,7 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                className={`mr-3 text-lg font-semibold text-slate-900 ${({
+                className={`mr-3 text-lg font-semibold text-violet-900 ${({
                   isActive,
                 }) => (isActive ? "active" : undefined)}`}
                 to="/statistics"
@@ -59,7 +58,7 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                className={`mr-3 text-lg font-semibold text-slate-900 ${({
+                className={`mr-3 text-lg font-semibold text-violet-900 ${({
                   isActive,
                 }) => (isActive ? "active" : undefined)}`}
                 to="/blog"
@@ -70,20 +69,20 @@ const Header = () => {
           </ul>
         </div>
         <div>
-          <img src={logo} alt="" />
+          <img className="h-16" src={logo} alt="" />
         </div>
         <Link
           to="/"
-          className="btn btn-ghost normal-case text-3xl text-red-500"
+          className="btn btn-ghost normal-case text-3xl text-white font-bold"
         >
-          Quiz Professor
+          Quizzy !
         </Link>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
           <li>
             <NavLink
-              className={`mr-3 text-lg font-semibold text-slate-900 ${({
+              className={`mr-3 font-bold text-lg  text-white ${({
                 isActive,
               }) => (isActive ? "active" : undefined)}`}
               to="/home"
@@ -94,7 +93,7 @@ const Header = () => {
 
           <li>
             <NavLink
-              className={`mr-3 text-lg font-semibold text-slate-900 ${({
+              className={`mr-3 text-lg font-bold text-white ${({
                 isActive,
               }) => (isActive ? "active" : undefined)}`}
               to="/topics"
@@ -104,7 +103,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              className={`mr-3 text-lg font-semibold text-slate-900 ${({
+              className={`mr-3 text-lg font-bold text-white ${({
                 isActive,
               }) => (isActive ? "active" : undefined)}`}
               to="/statistics"
@@ -114,7 +113,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              className={`mr-3 text-lg font-semibold text-slate-900 ${({
+              className={`mr-3 text-lg font-bold text-white ${({
                 isActive,
               }) => (isActive ? "active" : undefined)}`}
               to="/blog"
@@ -125,7 +124,7 @@ const Header = () => {
         </ul>
       </div>
     </div>
-  );
+);
 };
 
 export default Header;
