@@ -1,11 +1,22 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../Image/heading.png";
 import './Header.css'
 
 
-const Header = () => {
+export default function Header() {
+  
+  const [fix, setFix] = useState(false)
+
+  function setFixed() {
+    if (window.scrollY) {
+      setFix(true)
+    } else { setFix(false) }
+  }
+    window.addEventListener('scroll', setFixed)
+
   return (
-    <div className="navbar bg-violet-900">
+    <div className= {` navbar bg-violet-900 ${ fix ? 'navbar fixed':'navbar' } `} >
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -48,9 +59,8 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                className={`mr-3 text-lg font-semibold text-violet-900 ${({
-                  isActive,
-                }) => (isActive ? "active" : undefined)}`}
+                className={`mr-3 text-lg font-semibold text-violet-900 
+                ${({isActive,}) => (isActive ? "active" : undefined)}`}
                 to="/statistics"
               >
                 Status
@@ -124,7 +134,6 @@ const Header = () => {
         </ul>
       </div>
     </div>
-);
+  );
+  
 };
-
-export default Header;
