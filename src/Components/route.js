@@ -5,6 +5,8 @@ import Questions from "./Quesions";
 import Statistics from "./Statistics";
 import Topic from "./Topic";
 import Main from "./Main";
+import ErrorPage from './ErrorPage'
+
 
 export const router = createBrowserRouter([
   {
@@ -12,14 +14,16 @@ export const router = createBrowserRouter([
     loader: async () => {
       return fetch("https://openapi.programming-hero.com/api/quiz");
     },
+
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
       },
       {
-        path: "/home",
+        path :'/home',
         element: <Home></Home>,
       },
 
@@ -50,14 +54,7 @@ export const router = createBrowserRouter([
           ),
         element: <Questions></Questions>,
       },
-      {
-        path: "*",
-        element: (
-          <div className="text-yellow-600 text-5xl font-bold">
-            This is Not Our Page !!
-          </div>
-        ),
-      },
+      
     ],
   },
 ]);

@@ -4,8 +4,8 @@ import Topic from "./Topic";
 
 const Home = () => {
   return (
-    <div>
-      <h1 className="text-white text-4xl font-bold bg-indigo-900 pt-5">
+    <div className="">
+      <h1 className="text-white text-4xl font-bold bg-indigo-900  pt-5">
         Now! Quizzy Team Here!
       </h1>
       <p className="text-white text-lg p-8 font-semibold bg-indigo-900 h-48">

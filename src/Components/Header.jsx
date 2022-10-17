@@ -16,7 +16,7 @@ export default function Header() {
     window.addEventListener('scroll', setFixed)
 
   return (
-    <div className= {` navbar bg-violet-900 ${ fix ? 'navbar fixed':'navbar' } `} >
+    <div className= {` navbar bg-violet-900  ${ fix ? 'navbar fixed':'navbar' } `} >
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

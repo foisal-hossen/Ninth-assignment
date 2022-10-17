@@ -8,7 +8,7 @@ const QuestionType = ({ type }) => {
     navigate(`/quiz/${id}`);
   };
   return (
-    <div className="card bg-yellow-300 shadow-2xl">
+    <div className="card bg-yellow-300 shadow-2xl shadow-rose-600">
       <img src={logo} alt="Shoes" />
 
       <div className="card-body bg-slate-900 text-white">
